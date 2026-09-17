@@ -1167,3 +1167,97 @@ body {
   color: var(--accent-emerald);
   font-weight: 600;
 }
+
+/* --------------------------------------------------------------------------
+   MOBILE & TABLET RESPONSIVE ENHANCEMENTS
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  /* Modals: full screen friendly on mobile devices */
+  .modal-backdrop {
+    padding: 0.5rem;
+    align-items: flex-end;
+  }
+
+  .modal-box {
+    padding: 1.25rem;
+    border-radius: 20px 20px 0 0;
+    max-height: 88vh;
+    gap: 1rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.1rem;
+  }
+
+  /* Tables: smooth horizontal scroll with touch momentum */
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .custom-table th, 
+  .custom-table td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  /* Requisition matrix items on phone */
+  .requisition-catalog-grid {
+    grid-template-columns: 1fr;
+    max-height: 360px;
+  }
+
+  .choice-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.2rem;
+  }
+
+  /* Tactical Map on mobile */
+  #disaster-map {
+    height: 320px;
+  }
+
+  /* Toast alerts positioning on mobile */
+  #toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.82rem;
+    padding: 0.75rem 1rem;
+  }
+
+  /* Action buttons */
+  .btn-action {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .manifest-choice-group {
+    gap: 0.2rem;
+  }
+
+  .choice-btn {
+    font-size: 0.68rem;
+  }
+
+  .qty-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  #disaster-map {
+    height: 280px;
+  }
+}
+
